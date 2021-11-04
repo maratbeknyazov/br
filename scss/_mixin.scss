@@ -1,0 +1,57 @@
+@mixin flex($fDir,$jCon,$fWrap) {
+    display: flex;
+    flex-direction: $fDir;
+    justify-content: $jCon;
+    flex-wrap: $fWrap;
+}
+
+@mixin  text($fFamily,$fSize,$transform,$decoration,$color,$fWeight,$lHeigth){
+    font-family: $fFamily;
+    font-size: $fSize;
+    text-transform: $transform;
+    text-decoration: $decoration;
+    color: $color;
+    font-weight: $fWeight;
+    line-height: $lHeigth;
+}
+
+@mixin  position($top,$right,$bottom,$left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+@mixin img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin  bg {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin dots($top,$right,$bottom,$left) {
+    @include position($top,$right,$bottom,$left);
+        list-style: none;
+        li{
+            display: inline-block;
+            font-size: 0;
+            margin-left: 12px;
+            button{
+                font-size: 0;
+                width: 28px;
+                height: 4px;
+                border: none;
+                background-color: silver;
+            }
+        }
+
+        .slick-active{
+            button{background-color: $menuBg;}
+        }
+}

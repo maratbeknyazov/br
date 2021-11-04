@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixin";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 290px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:768px){
+    .container{
+        max-width: 696px;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .container{
+        max-width: 1170px;
+    }
+}
+
+@import "header";
+@import "number";
