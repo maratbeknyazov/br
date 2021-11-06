@@ -116,10 +116,14 @@
     }    
     &-button{
         display: inline-block;
-        @include text($ralew,14px,uppercase,none,#fff,800,null);
         padding: 20px 37px;
         background-color: $menuOrange;
         position: relative;
+        
+        a{
+            @include text($ralew,14px,uppercase,none,#fff,800,null);
+            // text-decoration: none;
+        }
     
         &:before{
             content: "";

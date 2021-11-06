@@ -1,0 +1,105 @@
+.portfolio-inner{
+    display: flex;
+    flex-direction: column;
+    &-title{
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+.portfolio-links-list{
+    list-style: none;
+    &__item{
+        @include text($ralew,22px,none,none,$featSilver,300,null);
+    }
+    li{
+        list-style: none;
+        margin-bottom: 30px;   
+        a:hover{
+            text-decoration: none;
+            font-size: 22px;
+            color: #000;
+            text-decoration: underline;
+            transform: scale(1.5);
+        }
+    }
+}
+.portfolio-slider-block-photo{
+    img{
+        width: 300px;
+    }
+}
+
+.accordion{
+    max-width: 1000px;
+    margin: 50px auto;
+
+    input{
+        display: none;
+    }
+
+
+    @for $var from 1 to 5 {
+        input:nth-child(#{$var}):checked ~ 
+        .accordion-block .accordion-block-segment:nth-child(#{$var}){
+            flex: 2;
+    
+            &:before{
+                display: none;
+            }
+        }
+    }
+
+    &-block{
+        display: flex;
+    }
+
+    &-block-segment{
+        flex: 1;
+        transition: 0.5s all linear;
+        position: relative;
+
+        &:before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#182c3d, 0.5);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+        h1{
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: #fff;
+            font-size: 20px;
+            z-index: 11;
+        }
+        h2{
+            position: absolute;
+            z-index: 11;
+            left: 20px;
+            bottom: 80px;
+            color: #fff;
+            font-size: 14px;
+            transform: rotate(-180deg);
+            writing-mode: vertical-lr;
+        }
+    }
+
+    &-block-segment label{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        top: 0;
+        left: 0;
+    }
+
+    &-block-segment img {
+        width: 100%;
+        height: 500px;
+    }
+}

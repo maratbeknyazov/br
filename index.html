@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-        href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Raleway:300,400,500,600,700,800&display=swap&subset=cyrillic"
-        rel="stylesheet">
-    <link rel="stylesheet" href="fonts/awesome/css/all.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Raleway:300,400,500,600,700,800&display=swap&subset=cyrillic" el="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">    
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -139,12 +136,12 @@
         <section class="portfolio" id="portfolio">
             <div class="container">
                 <article class="portfolio-inner">
-                    <div class="portfolio-title">
+                    <div class="portfolio-inner-title">
                         <h1>Портфолио</h1>
                     </div>
                     <div class="portfolio-links">
                         <ul class="portfolio-links-list">
-                            <li><a href="#" class="portfolio-links-list__item portfolio_active">Все проекты</a></li>
+                            <li><a href="#" class="portfolio-links-list__item">Все проекты</a></li>
                             <li><a href="#" class="portfolio-links-list__item">Дизайн интерьеров</a></li>
                             <li><a href="#" class="portfolio-links-list__item">Отделочные работы</a></li>
                         </ul>
@@ -152,37 +149,43 @@
                 </article>
             </div>
             
-            <div class="portfolio-container">
-                <article class="portfolio-slider">
-                    <div class="portfolio-slider-block">
-                        <div class="portfolio-slider-block__line">Дизайн интерьера</div>
-                        <div class="portfolio-slider-block-photo">
-                            <img src="images/portfolio1.png" alt="portfolio" class="portfolio-slider-block-photo__img">
-                        </div>
-                        <div class="portfolio-slider-block__title">Дизайн интерьера гостинной</div>
+            <div class="accordion">
+                <input type="radio" name="acc" id="acc1">
+                <input type="radio" name="acc" id="acc2">
+                <input type="radio" name="acc" id="acc3">
+                <input type="radio" name="acc" id="acc4">
+        
+                <div class="accordion-block">
+                    <div class="accordion-block-segment">
+                        <label for="acc1"></label>
+                        <img src="img/portfolio1.png" alt="">
+                        <h1>Дизайн интерьера гостинной</h1>
+                        <h2>Дизайн интерьера</h2>
                     </div>
-                    <div class="portfolio-slider-block portfolio-slider-block_active">
-                        <div class="portfolio-slider-block__line">Дизайн интерьера</div>
-                        <div class="portfolio-slider-block-photo">
-                            <img src="images/portfolio2.png" alt="portfolio" class="portfolio-slider-block-photo__img">
-                        </div>
-                        <div class="portfolio-slider-block__title">Дизайн интерьера</div>
+        
+                    <div class="accordion-block-segment">
+                        <label for="acc2"></label>
+                        <img src="img/portfolio2.png" alt="">
+                        <h1>Дизайн интерьера</h1>
+                        <h2>Дизайн интерьера</h2>
                     </div>
-                    <div class="portfolio-slider-block">
-                        <div class="portfolio-slider-block__line">Дизайн интерьера</div>
-                        <div class="portfolio-slider-block-photo">
-                            <img src="images/portfolio3.png" alt="portfolio" class="portfolio-slider-block-photo__img">
-                        </div>
-                        <div class="portfolio-slider-block__title">Дизайн столовой в стиле «Бохо»</div>
+        
+                    <div class="accordion-block-segment">
+                        <label for="acc3"></label>
+                        <img src="img/portfolio3.png" alt="">
+                        <h1>Дизайн столовой в стиле «Бохо»</h1>
+                        <h2>Дизайн интерьера</h2>
                     </div>
-                    <div class="portfolio-slider-block">
-                        <div class="portfolio-slider-block__line">Дизайн интерьера</div>
-                        <div class="portfolio-slider-block-photo">
-                            <img src="images/portfolio4.png" alt="portfolio" class="portfolio-slider-block-photo__img">
-                        </div>
-                        <div class="portfolio-slider-block__title">Лофт интерьер для отеля Hiloft</div>
+        
+                    <div class="accordion-block-segment">
+                        <label for="acc4"></label>
+                        <img src="img/portfolio4.png" alt="">
+                        <h1>Лофт интерьер для отеля Hiloft</h1>
+                        <h2>Дизайн интерьера</h2>
                     </div>
-                </article>
+                </div>
+        
+        
             </div>
         </section>
         </main>

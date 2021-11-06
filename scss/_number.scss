@@ -1,6 +1,6 @@
 .number{
-    @include flex(row,space-between,nowrap);
-    padding: 80px 0;
+    @include flex(column,space-between,nowrap);
+    padding: 20px 0;
     &-block{
         h1{
             @include text($playD,85.43px,none,none,$features,700,null);
@@ -11,8 +11,29 @@
         p{
             @include text($ralew,18px,none,none,$featSilver,300,25px);
         }
-        &:nth-child(2),&:nth-child(4){
-            margin-top: 205px;
+        // &:nth-child(2),&:nth-child(4){
+        //     margin-top: 205px;
+        // }
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .number{
+        @include flex(row,space-between,nowrap);
+        padding: 80px 0;
+        &-block{
+            h1{
+                @include text($playD,85.43px,none,none,$features,700,null);
+            }
+            h2{
+                @include text($ralew,24px,none,none,$black,700,null);
+            }
+            p{
+                @include text($ralew,18px,none,none,$featSilver,300,25px);
+            }
+            &:nth-child(2),&:nth-child(4){
+                margin-top: 205px;
+            }
         }
     }
 }
